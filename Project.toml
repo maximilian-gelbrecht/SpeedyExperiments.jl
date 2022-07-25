@@ -4,9 +4,11 @@ authors = ["Maximilian Gelbrecht <maximilian.gelbrecht@posteo.de> and contributo
 version = "0.1.0"
 
 [deps]
+Adapt = "79e6a3ab-5dfb-504d-930d-738a2a938a0e"
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
 Enzyme = "7da242da-08ed-463a-9acd-ee780be4f1d9"
 KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 SpeedyWeather = "9e226e20-d153-4fed-8a5b-493def4f21a9"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
