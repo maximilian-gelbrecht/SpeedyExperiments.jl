@@ -41,5 +41,5 @@ end
 
 Return currently used device for KernelAbstractions, either `CPU` or `CUDADevice`
 """
-device() = cuda_used[] ? CUDADevice : CPU
+device() = cuda_used[] ? KernelAbstractions.CUDADevice : KernelAbstractions.CPU
     
