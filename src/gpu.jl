@@ -1,5 +1,5 @@
 using Adapt
-using CUDA.CUSPARSE, SparseArrays, KernelAbstractions
+using CUDA.CUSPARSE, SparseArrays, KernelAbstractions, CUDAKernels
 
 """
     DeviceArray(x) 
@@ -41,5 +41,5 @@ end
 
 Return currently used device for KernelAbstractions, either `CPU` or `CUDADevice`
 """
-device() = cuda_used[] ? KernelAbstractions.CUDADevice : KernelAbstractions.CPU
+device() = cuda_used[] ? CUDADevice : CPU
     
