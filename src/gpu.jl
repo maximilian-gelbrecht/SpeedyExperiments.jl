@@ -1,5 +1,5 @@
 using Adapt
-using CUDA.CUSPARSE, SparseArrays
+using CUDA.CUSPARSE, SparseArrays, KernelAbstractions
 
 """
     DeviceArray(x) 
@@ -35,3 +35,11 @@ Manually toggle GPU use off
 function gpuoff()
     cuda_used[] = false
 end
+
+"""
+    device()
+
+Return currently used device for KernelAbstractions, either `CPU` or `CUDADevice`
+"""
+device() = cuda_used[] ? CUDADevice : CPU
+    
