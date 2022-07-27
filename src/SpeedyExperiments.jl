@@ -9,6 +9,6 @@ function __init__() # automatically called at runtime to set cuda_used
 end
 
 include("gpu.jl")
-export DeviceArray, DeviceSparseArray
+export DeviceArray, DeviceSparseArray, DeviceSetup
 
 end

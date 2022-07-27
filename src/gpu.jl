@@ -37,9 +37,27 @@ function gpuoff()
 end
 
 """
-    device()
+    Device()
 
 Return currently used device for KernelAbstractions, either `CPU` or `CUDADevice`
 """
-device() = cuda_used[] ? CUDADevice : CPU
+Device() = cuda_used[] ? CUDADevice : CPU
     
+
+"""
+    DeviceSetup
+
+Holds information about the device the model is running on and workgroup size
+"""
+struct DeviceSetup{S,T}
+    device::S 
+    n::T
+end 
+
+DeviceSetup(n::Integer) = DeviceSetup(device(), n)
+function DeviceSetup() 
+    current_device = Device()
+    n = device isa GPU ? 32 : 4  
+
+    DeviceSetup(current_device, n)
+end 
