@@ -10,5 +10,6 @@ end
 
 include("gpu.jl")
 export DeviceArray, DeviceSparseArray, DeviceSetup
+export launch_kernel!
 
 end
