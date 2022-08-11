@@ -14,6 +14,7 @@ SpeedyWeather = "9e226e20-d153-4fed-8a5b-493def4f21a9"
 Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [compat]
+SpeedyWeather = "0.3"
 julia = "1.7"
 
 [extras]
